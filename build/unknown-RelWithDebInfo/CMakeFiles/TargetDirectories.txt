@@ -1,0 +1,5 @@
+/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/CMakeFiles/linux_demo.dir
+/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/CMakeFiles/edit_cache.dir
+/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/CMakeFiles/rebuild_cache.dir
+/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/CMakeFiles/linux_demo_autogen_timestamp_deps.dir
+/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/CMakeFiles/linux_demo_autogen.dir

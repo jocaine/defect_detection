@@ -1,0 +1,1 @@
+/usr/bin/g++ -DQT_QML_DEBUG -g -Wl,--dependency-file=CMakeFiles/linux_demo.dir/link.d CMakeFiles/linux_demo.dir/DataCollector.cpp.o CMakeFiles/linux_demo.dir/DataHandler.cpp.o CMakeFiles/linux_demo.dir/ThreadSafeQueue.cpp.o CMakeFiles/linux_demo.dir/main.cpp.o -o linux_demo

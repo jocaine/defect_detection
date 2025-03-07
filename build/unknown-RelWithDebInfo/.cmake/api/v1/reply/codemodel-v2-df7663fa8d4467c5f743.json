@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-RelWithDebInfo-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.17"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "linux_demo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "linux_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linux_demo-RelWithDebInfo-de8cc7352c026d892817.json",
+					"name" : "linux_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linux_demo_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linux_demo_autogen-RelWithDebInfo-48ab17d4791d53b339c7.json",
+					"name" : "linux_demo_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "linux_demo_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-linux_demo_autogen_timestamp_deps-RelWithDebInfo-6c4450ff33dabcc1cd97.json",
+					"name" : "linux_demo_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo",
+		"source" : "/home/tlr/projects/linux_demo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

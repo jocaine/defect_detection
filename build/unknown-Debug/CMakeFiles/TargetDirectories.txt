@@ -1,0 +1,3 @@
+/home/tlr/projects/linux_demo/build/unknown-Debug/CMakeFiles/linux_demo.dir
+/home/tlr/projects/linux_demo/build/unknown-Debug/CMakeFiles/edit_cache.dir
+/home/tlr/projects/linux_demo/build/unknown-Debug/CMakeFiles/rebuild_cache.dir
