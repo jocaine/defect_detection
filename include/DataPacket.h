@@ -3,12 +3,31 @@
 #include<cstdint>
 #include<opencv4/opencv2/opencv.hpp>
 #include<ctime>
+#include <atomic>
+
+class UniqueID {
+public:
+    // 删除拷贝构造和赋值
+    UniqueID(const UniqueID&) = delete;
+    UniqueID& operator=(const UniqueID&) = delete;
+
+    // 全局访问点
+    static uint8_t getNext() {
+        static std::atomic<uint8_t> counter{0};
+        return ++counter;
+    }
+
+private:
+    UniqueID() = default;  // 防止外部实例化
+};
+
 struct DataPacket {
 	uint16_t header;       // 包头 (0xAA55)
 	uint8_t device_id;     // 设备ID
 	float value;           // 数据值
 	uint32_t timestamp;    // 时间戳
 };
+
 struct box {
     unsigned int x, y, w, h;       // (x,y) - top-left corner, (w, h) - width & height of bounded box
     float prob;                    // confidence - probability that the object was found correctly
@@ -23,6 +42,7 @@ struct box {
         ,obj_id(obj_id_)
     {}
 };
+
 struct Mat_Packet
 {
 	uint8_t id;
@@ -36,6 +56,7 @@ struct Mat_Packet
     }
     Mat_Packet(){}
 };
+
 struct result_Packet
 {
     uint8_t id;

@@ -155,6 +155,54 @@ linux_demo_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo_autogen.dir/build.make CMakeFiles/linux_demo_autogen.dir/build
 .PHONY : linux_demo_autogen/fast
 
+AbstractReceiver.o: AbstractReceiver.cpp.o
+.PHONY : AbstractReceiver.o
+
+# target to build an object file
+AbstractReceiver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/AbstractReceiver.cpp.o
+.PHONY : AbstractReceiver.cpp.o
+
+AbstractReceiver.i: AbstractReceiver.cpp.i
+.PHONY : AbstractReceiver.i
+
+# target to preprocess a source file
+AbstractReceiver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/AbstractReceiver.cpp.i
+.PHONY : AbstractReceiver.cpp.i
+
+AbstractReceiver.s: AbstractReceiver.cpp.s
+.PHONY : AbstractReceiver.s
+
+# target to generate assembly for a file
+AbstractReceiver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/AbstractReceiver.cpp.s
+.PHONY : AbstractReceiver.cpp.s
+
+CameraReceiver.o: CameraReceiver.cpp.o
+.PHONY : CameraReceiver.o
+
+# target to build an object file
+CameraReceiver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/CameraReceiver.cpp.o
+.PHONY : CameraReceiver.cpp.o
+
+CameraReceiver.i: CameraReceiver.cpp.i
+.PHONY : CameraReceiver.i
+
+# target to preprocess a source file
+CameraReceiver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/CameraReceiver.cpp.i
+.PHONY : CameraReceiver.cpp.i
+
+CameraReceiver.s: CameraReceiver.cpp.s
+.PHONY : CameraReceiver.s
+
+# target to generate assembly for a file
+CameraReceiver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/CameraReceiver.cpp.s
+.PHONY : CameraReceiver.cpp.s
+
 DataCollector.o: DataCollector.cpp.o
 .PHONY : DataCollector.o
 
@@ -203,6 +251,30 @@ DataHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/DataHandler.cpp.s
 .PHONY : DataHandler.cpp.s
 
+FSReceiver.o: FSReceiver.cpp.o
+.PHONY : FSReceiver.o
+
+# target to build an object file
+FSReceiver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/FSReceiver.cpp.o
+.PHONY : FSReceiver.cpp.o
+
+FSReceiver.i: FSReceiver.cpp.i
+.PHONY : FSReceiver.i
+
+# target to preprocess a source file
+FSReceiver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/FSReceiver.cpp.i
+.PHONY : FSReceiver.cpp.i
+
+FSReceiver.s: FSReceiver.cpp.s
+.PHONY : FSReceiver.s
+
+# target to generate assembly for a file
+FSReceiver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/FSReceiver.cpp.s
+.PHONY : FSReceiver.cpp.s
+
 ResultCollector.o: ResultCollector.cpp.o
 .PHONY : ResultCollector.o
 
@@ -226,6 +298,30 @@ ResultCollector.s: ResultCollector.cpp.s
 ResultCollector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/ResultCollector.cpp.s
 .PHONY : ResultCollector.cpp.s
+
+SocketReceiver.o: SocketReceiver.cpp.o
+.PHONY : SocketReceiver.o
+
+# target to build an object file
+SocketReceiver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/SocketReceiver.cpp.o
+.PHONY : SocketReceiver.cpp.o
+
+SocketReceiver.i: SocketReceiver.cpp.i
+.PHONY : SocketReceiver.i
+
+# target to preprocess a source file
+SocketReceiver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/SocketReceiver.cpp.i
+.PHONY : SocketReceiver.cpp.i
+
+SocketReceiver.s: SocketReceiver.cpp.s
+.PHONY : SocketReceiver.s
+
+# target to generate assembly for a file
+SocketReceiver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linux_demo.dir/build.make CMakeFiles/linux_demo.dir/SocketReceiver.cpp.s
+.PHONY : SocketReceiver.cpp.s
 
 linux_demo_autogen/mocs_compilation.o: linux_demo_autogen/mocs_compilation.cpp.o
 .PHONY : linux_demo_autogen/mocs_compilation.o
@@ -334,15 +430,27 @@ help:
 	@echo "... linux_demo_autogen"
 	@echo "... linux_demo_autogen_timestamp_deps"
 	@echo "... linux_demo"
+	@echo "... AbstractReceiver.o"
+	@echo "... AbstractReceiver.i"
+	@echo "... AbstractReceiver.s"
+	@echo "... CameraReceiver.o"
+	@echo "... CameraReceiver.i"
+	@echo "... CameraReceiver.s"
 	@echo "... DataCollector.o"
 	@echo "... DataCollector.i"
 	@echo "... DataCollector.s"
 	@echo "... DataHandler.o"
 	@echo "... DataHandler.i"
 	@echo "... DataHandler.s"
+	@echo "... FSReceiver.o"
+	@echo "... FSReceiver.i"
+	@echo "... FSReceiver.s"
 	@echo "... ResultCollector.o"
 	@echo "... ResultCollector.i"
 	@echo "... ResultCollector.s"
+	@echo "... SocketReceiver.o"
+	@echo "... SocketReceiver.i"
+	@echo "... SocketReceiver.s"
 	@echo "... linux_demo_autogen/mocs_compilation.o"
 	@echo "... linux_demo_autogen/mocs_compilation.i"
 	@echo "... linux_demo_autogen/mocs_compilation.s"

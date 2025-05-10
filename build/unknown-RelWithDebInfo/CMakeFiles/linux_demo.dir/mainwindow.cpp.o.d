@@ -292,23 +292,6 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /home/tlr/projects/linux_demo/include/ResultCollector.h \
  /home/tlr/projects/linux_demo/include/DataHandler.h \
- /usr/include/c++/9/iostream \
- /home/tlr/projects/linux_demo/include/ThreadPool_SingleFunc.hpp \
- /home/tlr/projects/linux_demo/include/ThreadSafeQueue.hpp \
- /usr/include/c++/9/mutex /usr/include/c++/9/bits/std_mutex.h \
- /usr/include/c++/9/bits/unique_lock.h /usr/include/c++/9/queue \
- /usr/include/c++/9/deque /usr/include/c++/9/bits/stl_deque.h \
- /usr/include/c++/9/bits/deque.tcc /usr/include/c++/9/bits/stl_queue.h \
- /usr/include/c++/9/condition_variable /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
  /home/tlr/projects/linux_demo/include/DataPacket.h \
  /usr/local/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
@@ -363,7 +346,9 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/opencv4/opencv2/core/cvstd.inl.hpp \
  /usr/include/c++/9/complex /usr/include/c++/9/sstream \
  /usr/include/c++/9/bits/sstream.tcc \
- /usr/include/opencv4/opencv2/core/utility.hpp \
+ /usr/include/opencv4/opencv2/core/utility.hpp /usr/include/c++/9/mutex \
+ /usr/include/c++/9/bits/std_mutex.h \
+ /usr/include/c++/9/bits/unique_lock.h \
  /usr/include/opencv4/opencv2/core/optim.hpp \
  /usr/include/opencv4/opencv2/core/ovx.hpp \
  /usr/include/opencv4/opencv2/core/cvdef.h \
@@ -388,7 +373,7 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/opencv4/opencv2/flann/matrix.h \
  /usr/include/opencv4/opencv2/flann/params.h \
  /usr/include/opencv4/opencv2/flann/any.h \
- /usr/include/opencv4/opencv2/flann/defines.h \
+ /usr/include/opencv4/opencv2/flann/defines.h /usr/include/c++/9/iostream \
  /usr/include/opencv4/opencv2/flann/saving.h \
  /usr/include/opencv4/opencv2/flann/nn_index.h \
  /usr/include/opencv4/opencv2/flann/result_set.h /usr/include/c++/9/set \
@@ -445,6 +430,9 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/opencv4/opencv2/stitching/detail/matchers.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/util.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/util_inl.hpp \
+ /usr/include/c++/9/queue /usr/include/c++/9/deque \
+ /usr/include/c++/9/bits/stl_deque.h /usr/include/c++/9/bits/deque.tcc \
+ /usr/include/c++/9/bits/stl_queue.h \
  /usr/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp \
  /usr/include/opencv4/opencv2/stitching/detail/seam_finders.hpp \
@@ -453,6 +441,18 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/opencv4/opencv2/video.hpp \
  /usr/include/opencv4/opencv2/video/tracking.hpp \
  /usr/include/opencv4/opencv2/video/background_segm.hpp \
+ /home/tlr/projects/linux_demo/include/ThreadPool_SingleFunc.hpp \
+ /home/tlr/projects/linux_demo/include/ThreadSafeQueue.hpp \
+ /usr/include/c++/9/condition_variable /usr/include/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
+ /usr/include/x86_64-linux-gnu/bits/environments.h \
+ /usr/include/x86_64-linux-gnu/bits/confname.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
+ /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
+ /usr/include/linux/close_range.h \
  /home/tlr/projects/linux_demo/include/yolo_v2_class.hpp \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/highgui/highgui_c.h \
@@ -460,6 +460,8 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/opencv4/opencv2/core/types_c.h \
  /usr/include/opencv4/opencv2/imgproc/imgproc_c.h \
  /usr/include/opencv4/opencv2/imgproc/types_c.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdeadlinetimer.h \
@@ -468,7 +470,6 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/c++/9/bits/atomic_futex.h \
  /home/tlr/projects/linux_demo/include/qcustomplot.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QPointer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedPointer \
@@ -1093,5 +1094,7 @@ CMakeFiles/linux_demo.dir/mainwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolBar \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout

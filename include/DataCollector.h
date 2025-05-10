@@ -1,60 +1,37 @@
 ﻿#ifndef _DATACOLLECTOR_H
 #define _DATACOLLECTOR_H
-#include<iostream>
 #include"DataPacket.h"
+#include"AbstractReceiver.h"
+
+#include<iostream>
 #include<signal.h>
-#include"DataHandler.h"
-#include<filesystem>
+#include<QObject>
 #include<string>
 #include<opencv4/opencv2/opencv.hpp>
 enum enum1
 {
-	IPC = 0,
-	FS = 1
+    Camera = 0,
+    FS = 1,
+    Socket=2
 };
-class DataReciver
+
+class DataCollector:public QObject
 {
-public:
-	DataReciver() {};
-	virtual void read(DataHandler* buff);
-	virtual bool start();
-	virtual void show();
-	virtual ~DataReciver()=0;
-};
-class IPC_Reciver :public DataReciver
-{
-public:
-	IPC_Reciver();
-	bool start()override;
-	void read(DataHandler* buff)override;
-	void show();
-private:
-	~IPC_Reciver()override;
-	void* shm_ptr;
-};
-class FS_Reciver:public DataReciver
-{
-public:
-	FS_Reciver();
-	bool start()override;
-	void read(DataHandler* buff)override;
-private:
-	std::filesystem::path dir_path;
-};
-class DataCollector
-{
+    Q_OBJECT
 public:
 
-	DataCollector(enum1 reciver_type);
+    DataCollector(enum1 reciver_type,QObject* parent=nullptr);
 	~DataCollector();
+
 	void start();
-	void get_handler(DataHandler* h);
-    static Mat_Packet pack(std::filesystem::path path);
-    static uint8_t get_id();
+    void pause();
+
+signals:
+    void MatPackage(Mat_Packet);
+
 private:
-	DataReciver* reciver;
-	DataHandler* handler;
-    static uint8_t serial_num;
+    AbstractReceiver* receiver;
+
 };
 
 #endif // !DATACOLLECTOR_H

@@ -9,9 +9,13 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "linux_demo_autogen/timestamp" "custom" "linux_demo_autogen/deps"
+  "/home/tlr/projects/linux_demo/AbstractReceiver.cpp" "CMakeFiles/linux_demo.dir/AbstractReceiver.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/AbstractReceiver.cpp.o.d"
+  "/home/tlr/projects/linux_demo/CameraReceiver.cpp" "CMakeFiles/linux_demo.dir/CameraReceiver.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/CameraReceiver.cpp.o.d"
   "/home/tlr/projects/linux_demo/DataCollector.cpp" "CMakeFiles/linux_demo.dir/DataCollector.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/DataCollector.cpp.o.d"
   "/home/tlr/projects/linux_demo/DataHandler.cpp" "CMakeFiles/linux_demo.dir/DataHandler.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/DataHandler.cpp.o.d"
+  "/home/tlr/projects/linux_demo/FSReceiver.cpp" "CMakeFiles/linux_demo.dir/FSReceiver.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/FSReceiver.cpp.o.d"
   "/home/tlr/projects/linux_demo/ResultCollector.cpp" "CMakeFiles/linux_demo.dir/ResultCollector.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/ResultCollector.cpp.o.d"
+  "/home/tlr/projects/linux_demo/SocketReceiver.cpp" "CMakeFiles/linux_demo.dir/SocketReceiver.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/SocketReceiver.cpp.o.d"
   "/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/linux_demo_autogen/mocs_compilation.cpp" "CMakeFiles/linux_demo.dir/linux_demo_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/linux_demo_autogen/mocs_compilation.cpp.o.d"
   "/home/tlr/projects/linux_demo/main.cpp" "CMakeFiles/linux_demo.dir/main.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/main.cpp.o.d"
   "/home/tlr/projects/linux_demo/mainwindow.cpp" "CMakeFiles/linux_demo.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/linux_demo.dir/mainwindow.cpp.o.d"

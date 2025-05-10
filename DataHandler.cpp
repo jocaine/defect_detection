@@ -1,11 +1,13 @@
 #include "DataHandler.h"
 Detector detector("../../darknet_config/dd.cfg","../../darknet_config/dd.weights");
 std::mutex detect_mtx;
-DataHandler::DataHandler()
-    :pool(nullptr)
+DataHandler::DataHandler(QObject* parent)
+    :QObject(parent)
+    ,pool(nullptr)
 {
 
 }
+
 DataHandler::~DataHandler()
 {
     delete pool;
@@ -15,11 +17,24 @@ void DataHandler::start()
 {
     pool=new ThreadPool_SingleFunc<result_Packet,Mat_Packet>(Handler,2,6);
 }
+
 void DataHandler::input(Mat_Packet&& data)
 {
     pool->add_Task(std::move(data));
 }
 
+void DataHandler::slInput(Mat_Packet data)
+{
+    //if(data==nullptr)
+    //{
+    //    std::cout<<"sss";
+    //}
+    //else
+    //{
+        pool->add_Task(std::move(data));
+    //}
+
+}
 result_Packet DataHandler::output()
 {
     return this->pool->result_queue->pop();

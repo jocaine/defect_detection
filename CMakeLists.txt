@@ -1,7 +1,7 @@
 Cmake_minimum_required(VERSION 3.17)
 project(linux_demo)
-find_package(OpenCV REQUIRED)
-find_package(Qt5 REQUIRED COMPONENTS Core Widgets PrintSupport)
+find_package(OpenCV REQUIRED COMPONENTS core videoio imgproc imgcodecs)
+find_package(Qt5 REQUIRED COMPONENTS Core Widgets PrintSupport Network)
 set(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu;${CMAKE_PREFIX_PATH}")
 
 set(CMAKE_AUTOMOC ON)
@@ -18,6 +18,10 @@ set(DARKNET_LIBRARY ${CMAKE_CURRENT_SOURCE_DIR}/lib/libdarknet.so)
 add_executable(linux_demo mainwindow.ui ${SOURCE} ${INCLUDE})
 
 # 链接库
-target_link_libraries(linux_demo ${OpenCV_LIBS} ${DARKNET_LIBRARY} Qt5::Core Qt5::Widgets Qt5::PrintSupport)
+target_link_libraries(linux_demo ${OpenCV_LIBS} ${DARKNET_LIBRARY}
+    Qt5::Core
+    Qt5::Widgets
+    Qt5::PrintSupport
+    Qt5::Network)
 # 定义 OPENCV 宏（如果 yolo_v2_class.hpp 需要）
 target_compile_definitions(linux_demo PRIVATE OPENCV)

@@ -13,8 +13,10 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +25,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *btn_FS;
+    QPushButton *btnSocket;
+    QPushButton *btnCamera;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -31,13 +37,32 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(316, 303);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
+        verticalLayout = new QVBoxLayout(centralWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        btn_FS = new QPushButton(centralWidget);
+        btn_FS->setObjectName(QString::fromUtf8("btn_FS"));
+
+        verticalLayout->addWidget(btn_FS);
+
+        btnSocket = new QPushButton(centralWidget);
+        btnSocket->setObjectName(QString::fromUtf8("btnSocket"));
+
+        verticalLayout->addWidget(btnSocket);
+
+        btnCamera = new QPushButton(centralWidget);
+        btnCamera->setObjectName(QString::fromUtf8("btnCamera"));
+
+        verticalLayout->addWidget(btnCamera);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 22));
+        menuBar->setGeometry(QRect(0, 0, 316, 27));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -54,6 +79,9 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Axis Tags Example", nullptr));
+        btn_FS->setText(QCoreApplication::translate("MainWindow", "local File", nullptr));
+        btnSocket->setText(QCoreApplication::translate("MainWindow", "socket", nullptr));
+        btnCamera->setText(QCoreApplication::translate("MainWindow", "camera", nullptr));
     } // retranslateUi
 
 };

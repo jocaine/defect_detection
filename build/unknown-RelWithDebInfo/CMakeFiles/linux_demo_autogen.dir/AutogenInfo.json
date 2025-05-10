@@ -95,7 +95,12 @@
 		"/usr/local/share/cmake-3.31/Modules/CMakeParseArguments.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake",
-		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake"
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/tlr/projects/linux_demo",
 	"CROSS_CONFIG" : false,
@@ -103,6 +108,18 @@
 	"DEP_FILE_RULE_NAME" : "linux_demo_autogen/timestamp",
 	"HEADERS" : 
 	[
+		[
+			"/home/tlr/projects/linux_demo/include/AbstractReceiver.h",
+			"MU",
+			"6YEA5652QU/moc_AbstractReceiver.cpp",
+			null
+		],
+		[
+			"/home/tlr/projects/linux_demo/include/CameraReceiver.h",
+			"MU",
+			"6YEA5652QU/moc_CameraReceiver.cpp",
+			null
+		],
 		[
 			"/home/tlr/projects/linux_demo/include/DataCollector.h",
 			"MU",
@@ -122,9 +139,21 @@
 			null
 		],
 		[
+			"/home/tlr/projects/linux_demo/include/FSReceiver.h",
+			"MU",
+			"6YEA5652QU/moc_FSReceiver.cpp",
+			null
+		],
+		[
 			"/home/tlr/projects/linux_demo/include/ResultCollector.h",
 			"MU",
 			"6YEA5652QU/moc_ResultCollector.cpp",
+			null
+		],
+		[
+			"/home/tlr/projects/linux_demo/include/SocketReceiver.h",
+			"MU",
+			"6YEA5652QU/moc_SocketReceiver.cpp",
 			null
 		],
 		[
@@ -178,6 +207,7 @@
 		"OPENCV",
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
+		"QT_NETWORK_LIB",
 		"QT_NO_DEBUG",
 		"QT_PRINTSUPPORT_LIB",
 		"QT_WIDGETS_LIB"
@@ -199,6 +229,7 @@
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
 		"/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport",
+		"/usr/include/x86_64-linux-gnu/qt5/QtNetwork",
 		"/usr/include/c++/9",
 		"/usr/include/x86_64-linux-gnu/c++/9",
 		"/usr/include/c++/9/backward",
@@ -232,9 +263,13 @@
 	"SETTINGS_FILE" : "/home/tlr/projects/linux_demo/build/unknown-RelWithDebInfo/CMakeFiles/linux_demo_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/tlr/projects/linux_demo/AbstractReceiver.cpp", "MU", null ],
+		[ "/home/tlr/projects/linux_demo/CameraReceiver.cpp", "MU", null ],
 		[ "/home/tlr/projects/linux_demo/DataCollector.cpp", "MU", null ],
 		[ "/home/tlr/projects/linux_demo/DataHandler.cpp", "MU", null ],
+		[ "/home/tlr/projects/linux_demo/FSReceiver.cpp", "MU", null ],
 		[ "/home/tlr/projects/linux_demo/ResultCollector.cpp", "MU", null ],
+		[ "/home/tlr/projects/linux_demo/SocketReceiver.cpp", "MU", null ],
 		[ "/home/tlr/projects/linux_demo/main.cpp", "MU", null ],
 		[ "/home/tlr/projects/linux_demo/mainwindow.cpp", "MU", null ],
 		[ "/home/tlr/projects/linux_demo/qcustomplot.cpp", "MU", null ]
