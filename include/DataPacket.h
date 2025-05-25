@@ -21,12 +21,12 @@ private:
     UniqueID() = default;  // 防止外部实例化
 };
 
-struct DataPacket {
-	uint16_t header;       // 包头 (0xAA55)
-	uint8_t device_id;     // 设备ID
-	float value;           // 数据值
-	uint32_t timestamp;    // 时间戳
-};
+//struct DataPacket {
+//	uint16_t header;       // 包头 (0xAA55)
+//	uint8_t device_id;     // 设备ID
+//	float value;           // 数据值
+//	uint32_t timestamp;    // 时间戳
+//};
 
 struct box {
     unsigned int x, y, w, h;       // (x,y) - top-left corner, (w, h) - width & height of bounded box
@@ -62,16 +62,18 @@ struct result_Packet
     uint8_t id;
     time_t timestamp;
     std::vector<box> boxes;
+
     result_Packet(uint8_t id_,time_t t)
         :id(id_)
         ,timestamp(t)
         {}
+
     result_Packet()
     {}
+
     void push(box b)
     {
         boxes.push_back(b);
     }
-
 };
 #endif // !DATAPACKET_H

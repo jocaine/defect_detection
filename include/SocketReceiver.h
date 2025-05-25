@@ -1,19 +1,18 @@
-// SocketReceiver.h
 #ifndef SOCKETRECEIVER_H
 #define SOCKETRECEIVER_H
 
 #include "AbstractReceiver.h"
 #include <QTcpSocket>
-#include <QHostAddress>
+#include<QTcpServer>
 
-class SocketReceiver : public AbstractReceiver
-{
+class SocketReceiver : public AbstractReceiver {
     Q_OBJECT
 public:
-    SocketReceiver(const QHostAddress& host = QHostAddress::LocalHost,quint16 port = 12345, QObject* parent = nullptr);
-    virtual bool start() override;
-    virtual bool pause() override;
-    virtual void read() override;
+    explicit SocketReceiver(QObject* parent = nullptr);
+    virtual ~SocketReceiver();
+
+    bool pause() override;
+    void read() override;
 
 private slots:
     void handleReadyRead();
@@ -26,6 +25,7 @@ private:
     QHostAddress m_host;
     quint16 m_port;
     qint32 m_expectedSize = -1;
+    std::atomic<bool> m_isConnected{false};
 };
 
 #endif // SOCKETRECEIVER_H

@@ -41,7 +41,10 @@ class MainWindow : public QMainWindow
 public:
    MainWindow(ResultCollector* r=nullptr,QWidget *parent = 0);
   ~MainWindow();
-  
+
+public slots:
+  void showout();
+
 private slots:
   void timerSlot();
   

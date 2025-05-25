@@ -3,11 +3,13 @@
 #include"DataPacket.h"
 #include"AbstractReceiver.h"
 
+#include<QWidget>
+#include<QPushButton>
 #include<iostream>
 #include<signal.h>
-#include<QObject>
 #include<string>
 #include<opencv4/opencv2/opencv.hpp>
+
 enum enum1
 {
     Camera = 0,
@@ -15,21 +17,25 @@ enum enum1
     Socket=2
 };
 
-class DataCollector:public QObject
+class DataCollector:public QWidget
 {
     Q_OBJECT
 public:
 
-    DataCollector(enum1 reciver_type,QObject* parent=nullptr);
+    DataCollector(QWidget* parent=nullptr);
 	~DataCollector();
 
-	void start();
     void pause();
 
 signals:
-    void MatPackage(Mat_Packet);
+    void MatPackage(Mat_Packet*);
+    void sgStartReading();
+
+private slots:
+    void initReceiver(enum1);
 
 private:
+    QPushButton* btnStart;
     AbstractReceiver* receiver;
 
 };

@@ -23,7 +23,7 @@ void DataHandler::input(Mat_Packet&& data)
     pool->add_Task(std::move(data));
 }
 
-void DataHandler::slInput(Mat_Packet data)
+void DataHandler::slInput(Mat_Packet* data)
 {
     //if(data==nullptr)
     //{
@@ -31,7 +31,7 @@ void DataHandler::slInput(Mat_Packet data)
     //}
     //else
     //{
-        pool->add_Task(std::move(data));
+        pool->add_Task(std::move(*data));
     //}
 
 }
@@ -64,24 +64,23 @@ result_Packet DataHandler::Handler(Mat_Packet data)
         switch(detection.obj_id)
         {
         case 0:
-            color=cv::Scalar(255, 165, 0);
+            color=cv::Scalar(0, 165, 255);
             break;
         case 1:
             color=cv::Scalar(0,255,0);
             break;
         case 2:
-            color=cv::Scalar(255, 0, 0);
-            break;
-        case 3:
             color=cv::Scalar(0, 0, 255);
             break;
+        case 3:
+            color=cv::Scalar(255, 0, 0);
+            break;
         case 4:
-            color=cv::Scalar(255, 255, 0);
+            color=cv::Scalar(0, 255, 255);
             break;
         case 5:
             color=cv::Scalar(128, 0, 128);
             break;
-
         }
         //绘制缺陷框
         cv::rectangle(result_image,

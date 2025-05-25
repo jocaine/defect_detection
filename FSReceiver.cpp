@@ -1,32 +1,28 @@
 #include"FSReceiver.h"
-
+#include"dlgBrowseFolder.h"
 #include<QSet>
 #include<QString>
 
 FS_Receiver::FS_Receiver(QObject* parent)
     :AbstractReceiver(parent)
 {
-}
-
-bool FS_Receiver::start()
-{
-    std::string path_str="/home/tlr/files";
-    //std::cout << "请文件路径：";
-    //std::cin >> path_str;
-    if (path_str.empty())
+    QString path=dlgBrowseFolder::getDirectory();
+    if(!path.isEmpty())
     {
-        std::cout << "vaild input!!!";
-        return false;
+        if(std::filesystem::is_directory(path.toStdString()))
+        {
+            dir_path=path.toStdString();
+            emit AbstractReceiver::sgReadyToRead();
+        }
+        else
+        {
+            std::cout << "vaild directory!!!";
+        }
     }
-
-    if (!std::filesystem::is_directory(path_str))
+    else
     {
-        std::cout << "vaild directory!!!";
-        return false;
+        std::cout<<"empty dir";
     }
-
-    dir_path=path_str;
-    return true;
 }
 
 bool FS_Receiver::pause()
@@ -51,7 +47,7 @@ void FS_Receiver::pack(const std::filesystem::path& f)
     }
     else
     {
-        emit MatPackage(Mat_Packet(cv::imread(f.string()),UniqueID::getNext()));
+        emit MatPackage(new Mat_Packet(cv::imread(f.string()),UniqueID::getNext()));
     }
 }
 

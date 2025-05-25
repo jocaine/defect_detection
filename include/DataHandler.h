@@ -17,7 +17,7 @@ public:
     void wait();
 
 public slots:
-    void slInput(Mat_Packet);
+    void slInput(Mat_Packet*);
 
 private:
     static result_Packet Handler(Mat_Packet);

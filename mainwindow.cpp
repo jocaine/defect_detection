@@ -64,6 +64,11 @@ MainWindow::~MainWindow()
   delete ui;
 }
 
+void MainWindow::showout()
+{
+    this->show();
+}
+
 void MainWindow::timerSlot()
 {
   // 计算并添加每个图表的新数据点:

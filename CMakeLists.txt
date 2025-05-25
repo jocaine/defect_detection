@@ -15,7 +15,8 @@ file(GLOB IN_HPP ${CMAKE_CURRENT_SOURCE_DIR}/include/*.hpp)
 SET(INCLUDE ${IN_H} ${IN_HPP})
 set(DARKNET_LIBRARY ${CMAKE_CURRENT_SOURCE_DIR}/lib/libdarknet.so)
 
-add_executable(linux_demo mainwindow.ui ${SOURCE} ${INCLUDE})
+add_executable(linux_demo mainwindow.ui  ${SOURCE} ${INCLUDE}
+    )
 
 # 链接库
 target_link_libraries(linux_demo ${OpenCV_LIBS} ${DARKNET_LIBRARY}
